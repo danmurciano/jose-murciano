@@ -136,7 +136,7 @@
 .image-top {
   z-index: 1;
   animation: image-fadeIn 0.6s both;
-  animation-delay: 0.1s;
+  animation-delay: 0.4s;
 }
 
 .image-bottom {

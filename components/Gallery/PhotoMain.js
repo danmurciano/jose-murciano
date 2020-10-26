@@ -6,6 +6,7 @@ import { Button, Modal } from 'semantic-ui-react';
 
 export default function PhotoMain({ pageA, pageB, activePage }) {
   const [ contactModal, setContactModal] = React.useState(false);
+  const images = "/images/full_size";
 
   return (
     <>
