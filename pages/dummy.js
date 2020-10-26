@@ -10,7 +10,7 @@
 //       <div class="dummy-col-index">
 //           <img
 //             id={`thumb_${photo.number}`}
-//             src={`/photos_good/thumbnails/${photo.number}.png`}
+//             src={`/photos_good/thumbnails/${photo.number}.jpg`}
 //             alt="..."
 //             class= "dummy-indexThumbnail"
 //           />

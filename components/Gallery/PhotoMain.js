@@ -12,11 +12,11 @@ export default function PhotoMain({ pageA, pageB, activePage }) {
     <div class="photoMainDiv">
 
       <div class={`animated ${activePage === "A" ? "image-top" : "image-bottom"}`} >
-        <img src={`/images/full_size/${pageA.number}.png`} class="photoMain" alt="" />
+        <img src={`/images/full_size/${pageA.number}.jpg`} class="photoMain" alt="" />
       </div>
 
       <div class={`animated ${activePage === "B" ? "image-top" : "image-bottom"}`} >
-        <img src={`/images/full_size/${pageB.number}.png`} class="photoMain" alt="" />
+        <img src={`/images/full_size/${pageB.number}.jpg`} class="photoMain" alt="" />
       </div>
 
     </div>

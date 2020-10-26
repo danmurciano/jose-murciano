@@ -4,7 +4,7 @@ import axios from "axios";
 
 
 export default function ContactModal({ setContactModal, page }) {
-  const photo = `/images/thumbnails/${page}.png`;
+  const photo = `/images/thumbnails/${page}.jpg`;
   const [form, setForm] = React.useState({ message: "Is this painting available?", photo: photo });
   const [disabled, setDisabled] = React.useState(true);
   const [loading, setLoading] = React.useState(false);
@@ -46,7 +46,7 @@ export default function ContactModal({ setContactModal, page }) {
 
         <>
           <div class="photoModalRow">
-            <img src={`/images/full_size/${page}.png`} class="card-img-top photoModal" alt="..."/>
+            <img src={`/images/full_size/${page}.jpg`} class="card-img-top photoModal" alt="..."/>
           </div>
 
 

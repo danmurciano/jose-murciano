@@ -33,7 +33,7 @@ function PhotoIndex({ pageA, setPageA, pageB, setPageB, activePage, setActivePag
       <div class="col-index">
           <img
             id={`thumb_${photo.number}`}
-            src={`/images/thumbnails/${photo.number}.png`}
+            src={`/images/thumbnails/${photo.number}.jpg`}
             alt="..."
             onClick={() => handlePhotoSelect(photo, event.target.id)}
             class={`thumb_${photo.number}` === activeThumbnail ?
