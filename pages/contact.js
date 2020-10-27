@@ -26,6 +26,7 @@ export default function Contact() {
       const url = `/api/contact`;
       const payload = { ...form};
       const response = await axios.post(url, payload);
+      console.log(response);
       setSuccess(true);
     } finally {
       setLoading(false);

@@ -2,12 +2,13 @@ const sendmail = require('sendmail')();
 
 export default async (req, res) => {
   const form = req.body;
+  const emailTo = "danm.editing@gmail.com";
 
   form.photo ?
 
     sendmail({
       from: form.email,
-      to: process.env.CONTACT_EMAIL,
+      to: emailTo,
       subject: 'Website Message',
       html: form.message + " ",
       attachments: [
@@ -24,7 +25,7 @@ export default async (req, res) => {
   :
     sendmail({
       from: form.email,
-      to: process.env.CONTACT_EMAIL,
+      to: emailTo,
       subject: 'Website Message',
       html: form.message + " "
     }, function(err, reply) {
@@ -32,5 +33,5 @@ export default async (req, res) => {
       console.dir(reply);
     })
 
-  res.status(200).json(form);
+  res.status(200).json(emailTo);
 }
