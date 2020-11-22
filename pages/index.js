@@ -9,7 +9,7 @@ export default function Home() {
 
         <div class="home-image">
           <div>
-            <img class="home-image-front" src="/images/banner_front2.png" alt="" />
+            <img class="home-image-front" />
           </div>
         </div>
 
