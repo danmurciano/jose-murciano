@@ -1,4 +1,3 @@
-// import React from "react";
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
 
@@ -8,9 +7,6 @@ function Header() {
 
   return (
     <>
-    <div class="title">
-      <p class="title"> Jose Murciano </p>
-    </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark navbarCenter">
 
@@ -55,6 +51,7 @@ function Header() {
 
       </div>
     </nav>
+
       </>
 
   );

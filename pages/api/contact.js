@@ -2,7 +2,7 @@ const sendmail = require('sendmail')();
 
 export default async (req, res) => {
   const form = req.body;
-  const emailTo = "danm.editing@gmail.com";
+  const emailTo = process.env.CONTACT_EMAIL;
 
   form.photo ?
 
@@ -13,7 +13,7 @@ export default async (req, res) => {
       html: form.message + " ",
       attachments: [
         {
-          filename: 'photo.png',
+          filename: 'photo.jpg',
           path: `/Users/danmurciano/Web-Dev/Projects/Jose/public/${form.photo}`
         }
       ]
