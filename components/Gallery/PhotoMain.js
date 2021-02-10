@@ -1,7 +1,8 @@
 import React from "react";
 import ContactModal from "./ContactModal";
 import { photoList } from "../../public/photoList";
-import { Button, Modal } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
+import { Modal } from 'react-bootstrap';
 
 
 export default function PhotoMain({ pageA, pageB, activePage }) {
@@ -54,22 +55,14 @@ export default function PhotoMain({ pageA, pageB, activePage }) {
       </div>
     </div>
 
-
-    <Modal
-      className="contactModal"
-      dimmer="blurring"
-      centered
-      closeIcon
-      open={contactModal}
-      onClose={() => setContactModal(false)}
-      onOpen={() => setContactModal(true)}
-    >
-      <ContactModal
-        setContactModal={setContactModal}
-        page={activePage === "A" ? pageA.number : pageB.number}
-      />
+    <Modal show={contactModal} onHide={() => setContactModal(false)} >
+      <Modal.Body>
+        <ContactModal
+          setContactModal={setContactModal}
+          page={activePage === "A" ? pageA.number : pageB.number}
+        />
+      </Modal.Body>
     </Modal>
     </>
-
   );
 }

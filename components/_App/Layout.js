@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Container } from "react-bootstrap";
-import Header2 from "./Header2";
+import Header from "./Header";
 
 function Layout({ children }) {
 
@@ -12,7 +12,7 @@ function Layout({ children }) {
       </Head>
 
       <div class="wrapper">
-        <Header2 />
+        <Header />
         <Container fluid class="page">
           {children}
         </Container>

@@ -19,13 +19,11 @@ export default function Gallery() {
 
   return (
     <div class="pageGallery">
-
-          <PhotoMain
-            pageA={pageA}
-            pageB={pageB}
-            activePage={activePage}
-          />
-
+      <PhotoMain
+        pageA={pageA}
+        pageB={pageB}
+        activePage={activePage}
+      />
 
       <div class="indexSection">
 

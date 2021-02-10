@@ -1,60 +1,41 @@
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
+import { Navbar, Nav } from "react-bootstrap";
 
 
-function Header() {
+export default function Header() {
   const router = useRouter();
 
   return (
     <>
-
-    <nav class="navbar navbar-expand-lg navbar-dark navbarCenter">
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="nav-menu">
-
-        <ul class="navbar-nav navbarList">
-
-            <li class="nav-item">
-              <a
-                href="/"
-                class={router.pathname === "/" ? "nav-link navTextActive" : "nav-link navText" }
-               >
-                Home
-              </a>
-            </li>
-
-
-            <li class="nav-item">
-              <a
-                href="/gallery"
-                class={router.pathname === "/gallery" ? "nav-link navTextActive" : "nav-link navText" }
-               >
-                Gallery
-              </a>
-            </li>
-
-
-            <li class="nav-item">
-              <a
-                href="/contact"
-                class={router.pathname === "/contact" ? "nav-link navTextActive" : "nav-link navText" }
-               >
-                Contact
-              </a>
-            </li>
-
-        </ul>
-
+    <Navbar variant="dark" expand="lg" className="navbar-center">
+      <div class="toggle-button-div">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </div>
-    </nav>
 
-      </>
+      <Navbar.Collapse className="navbar-sticky row" id="basic-navbar-nav">
+        <Nav className="nav-center">
+
+          <Nav.Link
+            className={router.pathname === "/" ? "nav-item navTextActive" : "nav-item navText"}
+            href="/">Home
+          </Nav.Link>
+
+          <Nav.Link
+            className={router.pathname === "/gallery" ? "nav-item navTextActive" : "nav-item navText"}
+            href="/gallery">Gallery
+          </Nav.Link>
+
+          <Nav.Link
+            className={router.pathname === "/contact" ? "nav-item navTextActive" : "nav-item navText"}
+            href="/contact">Contact
+          </Nav.Link>
+
+        </Nav>
+      </Navbar.Collapse>
+      <div class="toggle-button-div"/>
+    </Navbar>
+    </>
 
   );
 }
-
-export default Header;
