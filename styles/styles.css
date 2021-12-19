@@ -94,7 +94,7 @@
 .home-image-front {
   content: url("/images/Banner_front2.png");
   width: 100vw;
-  max-width: 904px;
+  max-width: 600px;
   padding: 50px 2px 64px;
 }
 

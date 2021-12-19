@@ -25,11 +25,11 @@ export default function PhotoMain({ pageA, pageB, activePage }) {
 
     <div class="photoBottom">
       <div class={`animated ${activePage === "A" ? "info-top" : "info-bottom"}`} >
-        <p className="photoInfo"> Acrylic &nbsp;{pageA.size} </p>
+        <p className="photoInfo"> {pageA.name}&nbsp; Acrylic &nbsp;{pageA.size} </p>
       </div>
 
       <div class={`animated ${activePage === "B" ? "info-top" : "info-bottom"}`} >
-        <p className="photoInfo"> Acrylic &nbsp;{pageB.size} </p>
+        <p className="photoInfo"> {pageB.name}&nbsp; Acrylic &nbsp;{pageB.size} </p>
       </div>
     </div>
 
